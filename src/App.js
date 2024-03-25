@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Header from './components/Header';
-import HomeMainSection from './components/HomeMainSection';
+import Homepage from './components/Homepage';
 import Footer from './components/Footer';
 import Productpage from './components/ProductPage';
 
@@ -9,7 +9,7 @@ function App() {
     <Router>
       <div className="App">
         <Header />
-        <Route path="/" exact component={HomeMainSection} />
+        <Route path="/" exact component={Homepage} />
         <Route path="/products" component={Productpage} />
         <Footer />
       </div>
