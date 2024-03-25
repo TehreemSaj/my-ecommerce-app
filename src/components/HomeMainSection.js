@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import reviews from '../data/reviews';
+import reviews from '../data/review';
 
 function HomeMainSection() {
   const [randomReviews, setRandomReviews] = useState([]);
