@@ -3,15 +3,19 @@ import { Link } from 'react-router-dom';
 
 function Header() {
   return (
-    <header>
-      <div className="logo">Your Logo</div>
-      <div className="company-name">Company Name</div>
-      <nav>
+    <div>
+      <header style={{ margin: '10px', display: 'flex', justifyContent: 'space-between' }}>
+        <img src="images/logo.png" alt="logo" width="60" height="50" />
+        <h1>Ecommerce Company</h1>
+      </header>
+      <nav style={{ margin: '10px', display: 'flex', justifyContent: 'space-between'}}>
         <Link to="/">Home</Link>
         <Link to="/products">Products</Link>
+        <Link to="/login">Login</Link>
       </nav>
-    </header>
+    </div>
   );
 }
 
 export default Header;
+

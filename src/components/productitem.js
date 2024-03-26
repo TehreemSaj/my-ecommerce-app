@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const ProductItem = ({ product, addToCart }) => {
+const ProductItem = ({ product, onAddToCart }) => {
   const [showDescription, setShowDescription] = useState(false);
 
   const toggleDescription = () => {
@@ -9,11 +9,11 @@ const ProductItem = ({ product, addToCart }) => {
 
   return (
     <div className="product-item" onMouseEnter={toggleDescription} onMouseLeave={toggleDescription}>
-      <img src={product.image} alt={product.name} />
-      <h3>{product.name}</h3>
-      {showDescription && <p>{product.description}</p>}
-      <p>${product.price}</p>
-      <button onClick={() => addToCart(product)}>Add to Cart</button>
+      <img className="product-image" src={product.image} alt={product.name} />
+      <div>{product.name}</div>
+      <div>${product.price}</div>
+      {showDescription && <div>{product.description}</div>}
+      <button onClick={() => onAddToCart(product)}>Add to Cart</button>
     </div>
   );
 };
