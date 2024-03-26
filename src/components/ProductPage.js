@@ -45,7 +45,7 @@ const Productpage = () => {
       <table>
         <tr>
           <td><ProductList addToCart={addToCart} /></td>
-          <td style={{verticalAlign:'top'}}><Cart cart={cart} removeItem={removeItem} /></td>
+          <td style={{verticalAlign:'top'}}><Cart cart={Cart} removeItem={removeItem} /></td>
         </tr>
       </table>
       <Footer />
