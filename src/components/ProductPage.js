@@ -5,21 +5,14 @@ import Cart from './Cart';
 import Footer from './Footer';
 
 const Productpage = () => {
-  // State to manage cart items
   const [cartItems, setCartItems] = useState([]);
-
-  // Load cart items from local storage on component mount
   useEffect(() => {
     const savedCartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
     setCartItems(savedCartItems);
   }, []);
-
-  // Save cart items to local storage whenever cartItems change
   useEffect(() => {
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
   }, [cartItems]);
-
-  // Function to handle adding items to the cart
   const addToCart = (product) => {
     const existingItem = cartItems.find((item) => item.id === product.id);
 
@@ -34,7 +27,6 @@ const Productpage = () => {
     }
   };
 
-  // Function to handle removing items from the cart
   const removeFromCart = (id) => {
     setCartItems(cartItems.filter((item) => item.id !== id));
   };

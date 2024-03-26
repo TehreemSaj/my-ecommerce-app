@@ -2,7 +2,6 @@ import React from 'react';
 import CartItem from './CartItem';
 
 const Cart = ({ cartItems, removeFromCart }) => {
-  // Calculate the total with two decimal places
   const total = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0).toFixed(2);
 
   return (
