@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import reviews from '../data/reviews.js';
+import reviews from '../data/review.js';
 
 function HomeMainSection() {
     const navigate = useNavigate();
